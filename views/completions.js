@@ -5,8 +5,7 @@ const router = Router();
 
 // Routes
 router.post("/", async (req, res) => {
-  const { mood, user } = req.body;
-  const { prompt } = req.headers;
+  const { prompt, mood, user } = req.body;
 
   const completion = await getCompletion({
     prompt,
